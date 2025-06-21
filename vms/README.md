@@ -1,36 +1,40 @@
-# ONOS VMware VM
+# Windows Server 2012 VM (VMware)
 
-This folder contains configuration and setup instructions for the ONOS virtual machine used in this lab.
+This VM is configured for lab use (e.g., domain controller, DNS, DHCP, etc.).
 
-## Files
+## 🖥️ Specs
 
-- `onos-vm.vmx`: VMware configuration file
-- `onos-network-setup.md`: Details on bridged/host-only interface setup
+- OS: Windows Server 2012 (Standard or R2)
+- CPU: 2 Cores
+- RAM: 3 GB
+- Disk: 40 GB (dynamically allocated)
+- Platform: VMware Workstation or Player
 
-## System Specs
+## 🌐 Network Setup
 
-- OS: Ubuntu 20.04 (64-bit)
-- RAM: 2 GB
-- CPU: 2 cores
-- Disk: 10 GB
+- Adapter 1: NAT (Internet access)
+- Adapter 2: Host-only (for private LAN with other lab VMs)
 
-## Network Configuration
+See `network-config.md` for detailed VMware network adapter setup.
 
-- NIC 1: Bridged (access to LAN)
-- NIC 2: Host-only (internal communication)
+## 📦 VM Files
 
-## Download VM Image
+- `windows-server-2012.vmx`: VMware config file (import into Workstation)
+- `windows-server-2012.vmdk`: ⚠️ Not included here. Download from [external link].
 
-📦 Due to file size, the `.vmdk` (virtual disk) is not stored in this repo.
+## 🛠️ Usage
 
-👉 You can download it from:  
-[https://your-link-to-image.com/onos-vm.7z](#)
+1. Open VMware Workstation/Player
+2. Click **"Open a Virtual Machine"**
+3. Select `windows-server-2012.vmx`
+4. Start the VM
 
-Or build manually using instructions in `onos-network-setup.md`.
+## 📥 Download
 
----
+> 🔗 The `.vmdk` file is too large for GitHub. Download the full VM from:
+[https://your-link-to-image.com/ws2012-vm.zip](#)
 
-🛠️ To import:
-1. Open VMware Workstation / Player
-2. Open `onos-vm.vmx`
-3. Start the VM
+## 🔐 Admin Credentials
+
+- Username: `Administrator`
+- Password: `dfghjk`
